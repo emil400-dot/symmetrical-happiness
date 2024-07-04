@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education and Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #020000;
+            text-align: center;
+            color: white; /* Ensure text is readable on dark background */
+        }
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 2rem; /* Reduced padding for smaller screens */
+            background: rgb(25, 192, 221);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensure no overflow on smaller screens */
+            color: #000; /* Set default text color for content */
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping for small screens */
+            padding: 1rem 0;
+            gap: 1rem; /* Add gap between items */
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px; /* Adjusted width for mobile */
+            height: 60px; /* Adjusted height for mobile */
+            margin: 0.5rem;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex-shrink: 0;
+        }
+        .payment-method img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .payment-method:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem; /* Further reduce padding for mobile */
+            }
+            .payment-methods {
+                justify-content: center; /* Center items on small screens */
+                gap: 0.5rem; /* Reduce gap for mobile */
+            }
+            .payment-method {
+                width: 100px; /* Smaller width for very small screens */
+                height: 50px; /* Smaller height for very small screens */
+                margin: 0.25rem; /* Smaller margin for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Education and Development</h1>
+        <p>The Rockefeller Foundation has made significant contributions to education and development worldwide. Some notable initiatives include:</p>
+        <ul style="text-align: left;">
+            <li>Rural Development Programs: They have supported projects aimed at improving education, health, and economic opportunities in rural communities around the world.</li>
+            <li>Microfinance: The foundation has been a major supporter of microfinance institutions that provide loans and financial services to low-income individuals and small businesses.</li>
+        </ul>
+        <p>Support humanities initiatives by contributing through your preferred payment method:</p>
+        <div class="payment-methods">
+            <a href="https://www.paypal.com" target="_blank" class="payment-method">
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="PayPal">
+            </a>
+            <a href="https://www.apple.com/apple-pay/" target="_blank" class="payment-method">
+                <img src="https://developer.apple.com/design/human-interface-guidelines/images/intro/apple-pay-logo.png" alt="Apple Pay">
+            </a>
+            <a href="https://www.coinbase.com/" target="_blank" class="payment-method">
+                <img src="https://logos-download.com/wp-content/uploads/2016/09/Bitcoin_logo.png" alt="Cryptocurrency">
+            </a>
+            <a href="https://www.zellepay.com/" target="_blank" class="payment-method">
+                <img src="https://www.zellepay.com/sites/default/files/images/logo/zelle-logo.png" alt="Zelle">
+            </a>
+            <a href="https://www.moneygram.com/" target="_blank" class="payment-method">
+                <img src="https://www.moneygram.com/mgo/central/images/global/en/logo-MG.png" alt="Moneygram">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

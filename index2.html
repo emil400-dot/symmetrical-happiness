@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Rockefeller Blog Jr.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: rgb(16, 26, 216);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+            padding: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+        nav a:hover {
+            background: #333;
+            transition: 0.3s;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .intro, .blog-posts, .about, .contact {
+            background: #fff;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 1rem 0;
+        }
+        .column {
+            background: #fff;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            cursor: pointer;
+            text-align: center;
+        }
+        .column:hover {
+            background: #e0e0e0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .contact form input, .contact form textarea {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .contact form input:focus, .contact form textarea:focus {
+            border-color: #333;
+            box-shadow: 0 0 8px rgba(51, 51, 51, 0.5);
+            outline: none;
+        }
+        .contact form button {
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact form button:hover {
+            background: #555;
+        }
+        .intro img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function openPage(page) {
+            window.open(page, '_blank');
+        }
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('form');
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+        
+                    // Get form data
+                    const formData = new FormData(form);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const message = formData.get('message');
+        
+                    // Send email via EmailJS
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                        name: name,
+                        email: email,
+                        message: message
+                    }).then(function(response) {
+                        alert('Message sent successfully!');
+                    }, function(error) {
+                        alert('Failed to send message. Please try again later.');
+                    });
+                });
+            });
+        </script>
+        
+    
+</head>
+<body>
+    <header>
+        <h1>Welcome to the David Rockefeller Blog Jr.</h1>
+    </header>
+    <nav>
+        <a href="#intro">Home</a>
+        <a href="#blog-posts">Blog</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="intro" class="intro">
+            <img src="img.jpg" alt="David Rockefeller Jr.">
+            <h2>About David Rockefeller</h2>
+            <p>David Rockefeller was an American banker and philanthropist. Learn more about his life and legacy.</p>
+        </section>
+        <section class="columns">
+            <div class="column" onclick="openPage('public_health.html')">
+                <h3>Public Health</h3>
+            </div>
+            <div class="column" onclick="openPage('education_development.html')">
+                <h3>Education and Development</h3>
+            </div>
+            <div class="column" onclick="openPage('humanities.html')">
+                <h3>The Humanities</h3>
+            </div>
+            <div class="column" onclick="openPage('charity_organisation.html')">
+                <h3>Charity Organisation</h3>
+            </div>
+            <div class="column" onclick="openPage('climate_resilience.html')">
+                <h3>Climate Resilience</h3>
+            </div>
+            <div class="column" onclick="openPage('renewable_energy.html')">
+                <h3>Renewable Energy</h3>
+            </div>
+        </section>
+        <section id="blog-posts" class="blog-posts">
+            <h2>Latest Blog Posts</h2>
+            <article>
+                <h3>Philanthropy and Legacy</h3>
+                <p>David Rockefeller was known for his numerous philanthropic activities. Read more about his work and legacy here.</p>
+            </article>
+            <article>
+                <h3>Financial Advice from David Rockefeller</h3>
+                <p>Learn more about the financial strategies and recommendations from David Rockefeller, one of the most influential bankers of the 20th century.</p>
+            </article>
+        </section>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm David Rockefeller Jr., a proud husband, father, and grandfather. I've always been driven by a desire to make a positive impact on the world. My family's legacy of philanthropy has instilled in me a deep commitment to giving back. I've spent my life supporting causes close to my heart, particularly those focused on education, conservation, and sustainable development. It's not just about writing checks; it's about getting involved, building partnerships, and creating lasting change.</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 David Rockefeller Blog Jr.</p>
+    </footer>
+</body>
+</html>
